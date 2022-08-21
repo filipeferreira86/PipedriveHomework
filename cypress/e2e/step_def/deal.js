@@ -1,4 +1,4 @@
-import {Given, When,And,Then} from "@badeball/cypress-cucumber-preprocessor";
+import {Given, When,And,Then, After} from "@badeball/cypress-cucumber-preprocessor";
 const login = require('../pages/loginPage')
 let dealsPage
 let deals_list_before
@@ -25,10 +25,10 @@ And ('I fill the data for a new deal', ()=>{
 
 And('click on save', ()=>{
     dealsPage.save_deal()
-    dealsPage.wait_deal_modal_disapear()
 })
 
 And('click on the item added', ()=>{
+    dealsPage.wait_deal_modal_disapear()
     dealsPage.get_deals_list().its('length').should('eq', deals_list_before+1)
     cy.get('[class="sc-djUGQo dnvGGk"]').eq(0).contains('new deal Title').click()
 })
@@ -45,4 +45,15 @@ Then('the data shown should be the same as inputed', ()=>{
     deal_detail = require('../pages/dealDetailPage')
     deal_detail.check_deal_data()
     deal_detail.delete_added_del()
+})
+
+After(() => {
+    cy.visit("https://pd18.pipedrive.com/pipeline/1/filter/1")
+    while(dealsPage.get_deals_list().its('length')>1){
+        dealsPage.wait_deal_modal_disapear()
+        dealsPage.get_deals_list().its('length').should('eq', deals_list_before+1)
+        cy.get('[class="sc-djUGQo dnvGGk"]').eq(0).contains('new deal Title').click()
+        deal_detail.delete_added_del()
+        cy.visit("https://pd18.pipedrive.com/pipeline/1/filter/1")
+    }
 })

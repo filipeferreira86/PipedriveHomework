@@ -16,7 +16,7 @@ class dealsPage{
         email: () => cy.get(locators.addDeal.compound_input, { timeout:40000 }).eq(2),
         save: () => cy.get(locators.addDeal.save, { timeout:40000 }),
         deals_list: () => cy.get(locators.dealsList, { timeout:40000 }).eq(0),
-        error_message_field: () => cy.get(locators.addDeal.error_message_field, { timeout:40000 }).eq(0)
+        error_message_field: () => cy.get(locators.addDeal.error_message_field, { timeout:10000 }).eq(0)
     }
 
     create_new_deal(){
