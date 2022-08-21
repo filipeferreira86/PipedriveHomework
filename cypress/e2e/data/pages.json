@@ -1,0 +1,57 @@
+{   
+
+    "login":{
+        "username": "#login",
+        "password": "#password",
+        "btnlogin": "[data-test=submit-button]",
+        "data":{
+            "id":1,
+            "Username": "filipe.ferreira.de.jesus@gmail.com",
+            "Password": "LZ#75FS$b.XWq2z",
+            "Profile": "Admin"
+        }
+    },
+
+    "deal":{
+        "newDealBtn": "[data-test='pipeline-add-deal']",
+        "dealsList": "[data-test='deals-list']",
+        "addDeal":{
+            "contact": "#downshift-0-input",
+            "organization": "#downshift-1-input",
+            "title": "[data-coachmark='title']",
+            "compound_input": "[data-testid='compound-input']",
+            "closeDate": "[placeholder='MM/DD/YYYY']",
+            "save": "[data-test='add-modals-save']",
+            "error_message_field": "[class='cui5-input__error-message']"
+        },
+        "data":{
+            "contact": "new deal contact",
+            "organization": "ppdr",
+            "title": "new deal Title",
+            "value": "115",
+            "close_date": "01/10/2022",
+            "check_close_date": "January 10, 2022",
+            "phone": "+372 000 0000",
+            "email": "filipe.ferreira.de.jesus@gmail.com",
+            "error_message_contact": "A person or organization is required",
+            "error_message_organization": "A person or organization is required",
+            "error_message_title": "Title is required"
+            
+        }
+    },
+
+    "dealDetail":{
+        "wrapper": "[class='viewContainer']",
+        "contactname": "[class='contactName']",
+        "title": "[class='editable title']",
+        "value": "[data-test='deal-value']",
+        "close_date": "[data-test='deal-expected-close-date']",
+        "phone": "[data-test='phone-number-button']",
+        "email": "[data-test='email-label']",
+        "dropMenu": "[class='input selectSettings']",
+        "class_delete": "[class='delete']",
+        "dlt_btn": "[class='cui5-option ']"
+    }
+    
+
+}

@@ -1,0 +1,30 @@
+{
+  "name": "pipedrivehomework",
+  "version": "1.0.0",
+  "description": "Pipe Drive Automation Homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipeferreira86/PipedriveHomework.git"
+  },
+  "keywords": [
+    "Cucumber",
+    "Cypress",
+    "Pipedrive"
+  ],
+  "author": "Filipe Ferreira de Jesus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/filipeferreira86/PipedriveHomework/issues"
+  },
+  "homepage": "https://github.com/filipeferreira86/PipedriveHomework#readme",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^12.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.3",
+    "cypress": "^10.6.0",
+    "esbuild": "^0.15.5"
+  }
+}
