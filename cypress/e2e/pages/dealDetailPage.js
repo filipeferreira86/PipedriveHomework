@@ -29,6 +29,14 @@ class dealDetailPage{
     }
 
     delete_added_del(){
+        cy.get("body").then($body => {
+            cy.pause()
+            if ($body.find("[data-test=sales-assistant-alert-close-button]").length > 0) {
+                cy.pause()
+                cy.log("---------------------------------------> entrei pra clicar")
+                cy.get("[data-test=sales-assistant-alert-close-button]").click()
+            }
+        });
         this.elements.drop_menu_btn().click()
         cy.get('[class="delete"]').find('[class="cui5-option "]').click()
     }
