@@ -1,7 +1,7 @@
 const json = require('../data/pages.json')
 let data = json.deal.data
+let data_error = json.deal.data_error_message
 let locators = json.deal
-let list_size
 
 class dealsPage{
 
@@ -54,23 +54,20 @@ class dealsPage{
 
     new_deal_with_json_except(excep){
         if(excep!="Contact person"){
-            this.elements.contact().type(data.contact)
+            this.elements.contact().type(data_error.contact)
         }
         if(excep!="Organization"){
-            this.elements.organization().type(data.organization)
+            this.elements.organization().type(data_error.organization)
         }
         this.elements.title().clear()
         if(excep!="Title"){
             
-            this.elements.title().type(data.title)
+            this.elements.title().type(data_error.title)
         }
-        /*this.elements.value().type(data.value)
-        this.elements.close_date().type(data.close_date)
-        this.elements.phone().type(data.phone)
-        this.elements.email().type(data.email)*/
+        
     }
 
-    clear_field(field_to_clear){
+    /*clear_field(field_to_clear){
         switch (field_to_clear){
             case "Contact person":
                 this.elements.contact().clear().type('')
@@ -84,18 +81,18 @@ class dealsPage{
             default:
                 throw new Error("field not found")
         }
-    }
+    }*/
 
     validate_error_message(field_empty){
         switch(field_empty){
             case "Contact person":
-                this.elements.error_message_field().should('contain.text', data.error_message_contact)
+                this.elements.error_message_field().should('contain.text', data_error.error_message_contact)
                 break
             case "Organization":
-                this.elements.error_message_field().should('contain.text', data.error_message_organization)
+                this.elements.error_message_field().should('contain.text', data_error.error_message_organization)
                 break
             case "Title":
-                this.elements.error_message_field().should('contain.text', data.error_message_title)
+                this.elements.error_message_field().should('contain.text', data_error.error_message_title)
                 break
             default:
                 throw new Error("field not found")

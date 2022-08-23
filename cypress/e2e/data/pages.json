@@ -32,11 +32,17 @@
             "close_date": "01/10/2022",
             "check_close_date": "January 10, 2022",
             "phone": "+372 000 0000",
-            "email": "filipe.ferreira.de.jesus@gmail.com",
+            "email": "filipe.ferreira.de.jesus@gmail.com"
+            
+        },
+        "data_error_message":{
+            "contact": "error msg ctt",
+            "organization": "error msg org",
+            "title": "error msg ttl",
+            "value": "115",
             "error_message_contact": "A person or organization is required",
             "error_message_organization": "A person or organization is required",
             "error_message_title": "Title is required"
-            
         }
     },
 
