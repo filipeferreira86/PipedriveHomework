@@ -10,7 +10,7 @@ I chose the adding new deals as my main task for this the scenarios as can be se
 
 ## Bugs
 
-### [BugReport]()
+### [BugReport](https://github.com/filipeferreira86/PipedriveHomework/blob/main/bug%20reports/Bug%20Report.docx)
 
 ## Automation framework
 ### Installations
