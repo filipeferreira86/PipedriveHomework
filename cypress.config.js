@@ -20,4 +20,5 @@ module.exports = defineConfig({
     specPattern: "cypress/e2e/features/*.feature",
     baseUrl: 'https://app.pipedrive.com/'
   },
+  projectId: "pdrh1q"
 })

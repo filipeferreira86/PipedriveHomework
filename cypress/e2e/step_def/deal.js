@@ -41,8 +41,12 @@ Then('a message of error should be presented for {string} field', (field_empty)=
     dealsPage.validate_error_message(field_empty)
 })
 
-Then('the data shown should be the same as inputed', ()=>{
+Then('the data shown should be the same as inputted', ()=>{
     deal_detail = require('../pages/dealDetailPage')
     deal_detail.check_deal_data()
     deal_detail.delete_added_del()
+})
+
+afterEach(function(){
+    cy.visit('https://pd18.pipedrive.com/auth/logout')
 })
